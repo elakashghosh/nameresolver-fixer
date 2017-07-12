@@ -27,10 +27,9 @@
 
 int main()
 {
-	system("sudo echo 'nameserver 8.8.8.8' > resolv.confd");
+	system("sudo cd /etc");
 	printf("Fixing issues wait!\n");
-	system("sudo cp resolv.confd /etc");
-	system("sudo rm -f resolv.confd");
+	system("echo 'nameserver 8.8.8.8' > resolv.conf");
 	printf("resolv.conf modified\n");
 	printf("I need to delete myself\n");
 	system("sudo rm -f runme.c");
